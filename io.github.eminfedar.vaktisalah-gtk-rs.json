@@ -11,6 +11,8 @@
         "--share=network",
         "--socket=pulseaudio",
         "--share=ipc",
+        "--talk-name=org.freedesktop.portal.Background",
+        "--talk-name=org.freedesktop.Notifications",
         "--socket=fallback-x11",
         "--socket=wayland"
     ],
