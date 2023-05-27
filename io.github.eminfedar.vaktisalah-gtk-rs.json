@@ -61,7 +61,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/eminfedar/vaktisalah-gtk-rs",
-                    "tag": "v1.0.2"
+                    "tag": "v1.0.3"
                 },
                 "cargo-sources.json"
             ],
@@ -79,6 +79,7 @@
             ],
             "post-install": [
                 "install -Dm644 export/io.github.eminfedar.vaktisalah-gtk-rs.svg /app/share/icons/hicolor/scalable/apps/io.github.eminfedar.vaktisalah-gtk-rs.svg",
+                "install -Dm644 export/io.github.eminfedar.vaktisalah-gtk-rs.png /app/share/icons/hicolor/128x128/apps/io.github.eminfedar.vaktisalah-gtk-rs.png",
                 "install -Dm644 export/io.github.eminfedar.vaktisalah-gtk-rs.desktop /app/share/applications/io.github.eminfedar.vaktisalah-gtk-rs.desktop",
                 "install -Dm644 export/io.github.eminfedar.vaktisalah-gtk-rs.xml /app/share/metainfo/io.github.eminfedar.vaktisalah-gtk-rs.metainfo.xml"
             ]
