@@ -12,7 +12,10 @@
         "--socket=pulseaudio",
         "--share=ipc",
         "--socket=fallback-x11",
-        "--socket=wayland"
+        "--socket=wayland",
+        "--device=dri",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher"
     ],
 
     "modules": [
@@ -48,7 +51,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/eminfedar/vaktisalah-gtk-rs",
-                    "tag": "v2.2.0"
+                    "commit": "7041592a84768768f0c9fb4a91df912870b5fc7a"
                 },
                 "cargo-sources.json"
             ],
