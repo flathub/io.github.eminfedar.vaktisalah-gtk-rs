@@ -1380,14 +1380,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/ksni/ksni-0.2.1.crate",
-        "sha256": "b31b9cf486bcd22bcd09900b44538cf87b00f526fcd087d671a632dc0d271d0c",
-        "dest": "cargo/vendor/ksni-0.2.1"
+        "url": "https://static.crates.io/crates/ksni/ksni-0.2.2.crate",
+        "sha256": "4934310bdd016e55725482b8d35ac0c16fd058c1b955d8959aa2d953b918c85b",
+        "dest": "cargo/vendor/ksni-0.2.2"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"b31b9cf486bcd22bcd09900b44538cf87b00f526fcd087d671a632dc0d271d0c\", \"files\": {}}",
-        "dest": "cargo/vendor/ksni-0.2.1",
+        "contents": "{\"package\": \"4934310bdd016e55725482b8d35ac0c16fd058c1b955d8959aa2d953b918c85b\", \"files\": {}}",
+        "dest": "cargo/vendor/ksni-0.2.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
