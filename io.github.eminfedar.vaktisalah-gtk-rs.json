@@ -38,7 +38,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/eminfedar/vaktisalah-gtk-rs",
-                    "commit": "c494872d159d6f942e9ff5bb0c84d06143f0aaa8"
+                    "tag": "v2.4.1"
                 },
                 "cargo-sources.json"
             ],
