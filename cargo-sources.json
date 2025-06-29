@@ -2290,6 +2290,19 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/pure-rust-locales/pure-rust-locales-0.8.1.crate",
+        "sha256": "1190fd18ae6ce9e137184f207593877e70f39b015040156b1e05081cdfe3733a",
+        "dest": "cargo/vendor/pure-rust-locales-0.8.1"
+    },
+    {
+        "type": "inline",
+        "contents": "{\"package\": \"1190fd18ae6ce9e137184f207593877e70f39b015040156b1e05081cdfe3733a\", \"files\": {}}",
+        "dest": "cargo/vendor/pure-rust-locales-0.8.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "archive",
+        "archive-type": "tar-gzip",
         "url": "https://static.crates.io/crates/quinn/quinn-0.11.8.crate",
         "sha256": "626214629cda6781b6dc1d316ba307189c85ba657213ce642d9c77670f8202c8",
         "dest": "cargo/vendor/quinn-0.11.8"
