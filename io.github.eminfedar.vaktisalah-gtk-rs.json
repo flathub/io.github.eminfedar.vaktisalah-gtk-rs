@@ -1,7 +1,7 @@
 {
     "id": "io.github.eminfedar.vaktisalah-gtk-rs",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -20,38 +20,13 @@
 
     "modules": [
         {
-            "name": "libsass",
-            "buildsystem":"meson",
-            "builddir": true,
-            "sources": [
-                {
-                    "type":"git",
-                    "url":"https://github.com/lazka/libsass.git",
-                    "commit": "aac79dccd3c8f7e8f22125f87a119f3b1ee9d487"
-                }
-            ]
-        },
-        {
-            "name": "sassc",
-            "buildsystem":"meson",
-            "builddir": true,
-            "cleanup": ["*"],
-            "sources": [
-                {
-                    "type":"git",
-                    "url":"https://github.com/lazka/sassc.git",
-                    "commit": "a1950c2d95ea4c051feb90bb1f43559fbb54bf36"
-                }
-            ]
-        },
-        {
             "name": "vaktisalah-gtk-rs",
             "buildsystem": "simple",
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/eminfedar/vaktisalah-gtk-rs",
-                    "tag": "v2.3.2"
+                    "commit": "d5c4a82057c421bc3ca1c975e4e0788fb8b56333"
                 },
                 "cargo-sources.json"
             ],
@@ -64,7 +39,9 @@
             "build-commands": [
                 "cargo --offline fetch --manifest-path Cargo.toml",
                 "cargo --offline build --release",
-                "install -Dm755 ./target/release/vaktisalah-gtk-rs -t /app/bin/"
+                "install -Dm755 ./target/release/vaktisalah-gtk-rs -t /app/bin/",
+                "install -Dm755 ./po/output/tr/LC_MESSAGES/vaktisalah-gtk-rs.mo -t /app/share/locale/tr/LC_MESSAGES/vaktisalah-gtk-rs.mo"
+
             ],
             "post-install": [
                 "install -Dm644 export/io.github.eminfedar.vaktisalah-gtk-rs.svg /app/share/icons/hicolor/scalable/apps/io.github.eminfedar.vaktisalah-gtk-rs.svg",
