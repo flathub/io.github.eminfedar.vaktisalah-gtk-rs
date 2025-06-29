@@ -20,6 +20,18 @@
 
     "modules": [
         {
+            "name": "blueprint-compiler",
+            "buildsystem": "meson",
+            "cleanup": ["*"],
+            "sources": [
+                {
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/blueprint-compiler",
+                "tag": "v0.16.0"
+                }
+            ]
+        },
+        {
             "name": "vaktisalah-gtk-rs",
             "buildsystem": "simple",
             "sources": [
