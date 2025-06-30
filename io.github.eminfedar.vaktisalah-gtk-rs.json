@@ -1,7 +1,7 @@
 {
     "id": "io.github.eminfedar.vaktisalah-gtk-rs",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "sdk-extensions" : [
         "org.freedesktop.Sdk.Extension.rust-stable"
@@ -20,27 +20,14 @@
 
     "modules": [
         {
-            "name": "libsass",
-            "buildsystem":"meson",
-            "builddir": true,
-            "sources": [
-                {
-                    "type":"git",
-                    "url":"https://github.com/lazka/libsass.git",
-                    "commit": "aac79dccd3c8f7e8f22125f87a119f3b1ee9d487"
-                }
-            ]
-        },
-        {
-            "name": "sassc",
-            "buildsystem":"meson",
-            "builddir": true,
+            "name": "blueprint-compiler",
+            "buildsystem": "meson",
             "cleanup": ["*"],
             "sources": [
                 {
-                    "type":"git",
-                    "url":"https://github.com/lazka/sassc.git",
-                    "commit": "a1950c2d95ea4c051feb90bb1f43559fbb54bf36"
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/blueprint-compiler",
+                "tag": "v0.16.0"
                 }
             ]
         },
@@ -51,7 +38,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/eminfedar/vaktisalah-gtk-rs",
-                    "tag": "v2.3.2"
+                    "tag": "v2.4.2"
                 },
                 "cargo-sources.json"
             ],
@@ -64,9 +51,10 @@
             "build-commands": [
                 "cargo --offline fetch --manifest-path Cargo.toml",
                 "cargo --offline build --release",
-                "install -Dm755 ./target/release/vaktisalah-gtk-rs -t /app/bin/"
+                "install -Dm755 ./target/release/vaktisalah-gtk-rs -t /app/bin/"                
             ],
             "post-install": [
+                "install -Dm755 ./po/output/tr/LC_MESSAGES/vaktisalah-gtk-rs.mo /app/share/locale/tr/LC_MESSAGES/vaktisalah-gtk-rs.mo",
                 "install -Dm644 export/io.github.eminfedar.vaktisalah-gtk-rs.svg /app/share/icons/hicolor/scalable/apps/io.github.eminfedar.vaktisalah-gtk-rs.svg",
                 "install -Dm644 export/io.github.eminfedar.vaktisalah-gtk-rs.png /app/share/icons/hicolor/128x128/apps/io.github.eminfedar.vaktisalah-gtk-rs.png",
                 "install -Dm644 export/io.github.eminfedar.vaktisalah-gtk-rs.desktop /app/share/applications/io.github.eminfedar.vaktisalah-gtk-rs.desktop",
